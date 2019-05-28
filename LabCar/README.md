@@ -1,8 +1,5 @@
 # LabCar
 
-Recrea la siguiente página web. Las imágenes que necesitarás las
-encuentras [aquí](https://github.com/Laboratoria-learning/lab-car-boilerplate).
-
 ## 1. La versión movil
 Buscamos implementar la técnica de `mobile first` y que al tener lista esta versión generes un primer tag en github.
 
