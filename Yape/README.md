@@ -8,7 +8,6 @@
 
 <img src="https://lh3.googleusercontent.com/VkcEGp7-gtjprfHptzPk-NjK9XLmZxMq_vArCS7rOpevB9LpQq95kkGrGHaWqsMSfV1lIhoNo9C_39gHS517gpsT34d_TYv6A4oca8co=s1600"  width="450">
 
-
 ### Pantalla 2
 
 * Debe poder ingresar un teléfono y poder aceptar los términos y condiciones
@@ -17,9 +16,12 @@
 * Cuando se hace clic en continuar, el sistema debe enviar un request al API para registrar el teléfono y generar el código (los parámetros de envío son phone y terms. Los parámetros son case sensitive) 
 Tener en cuenta que el API no permite más de 2 registros del mismo teléfono a la vez
 
-<img src="https://lh5.googleusercontent.com/wFqXuJFGcsanipVHr740ffn33H4CDkNuXd0wqGFUXzbo3iz9JE0yn-MZgJ60bmpQUm841sq-aIro_KZftJSvkrNVKJdnYgOUiNq1MaHa=s1600" width="350px">
+<div style="text-align: center">
+<img src="https://lh5.googleusercontent.com/wFqXuJFGcsanipVHr740ffn33H4CDkNuXd0wqGFUXzbo3iz9JE0yn-MZgJ60bmpQUm841sq-aIro_KZftJSvkrNVKJdnYgOUiNq1MaHa=s1600" width="250px">
 
-<img src="https://lh5.googleusercontent.com/CIqnVFt_o3VlEi7vrkyAsDSiQJY58CZvh10rw8V2Lm_zIyouoc79Ujl3759VGp-dRGJbhPv2eHMlBGhIx0GXcuB4Jd3xUtzo8O8aR_PY=s1600" width="350px">
+
+<img src="https://lh5.googleusercontent.com/CIqnVFt_o3VlEi7vrkyAsDSiQJY58CZvh10rw8V2Lm_zIyouoc79Ujl3759VGp-dRGJbhPv2eHMlBGhIx0GXcuB4Jd3xUtzo8O8aR_PY=s1600" width="250px">
+</div>
 
 
 
@@ -30,9 +32,7 @@ Tener en cuenta que el API no permite más de 2 registros del mismo teléfono a 
 
 * Debe haber un contador que a los 21 segundos llame al API para ingresar un nuevo código e invalidar el anterior
 
-
 <img src="https://lh6.googleusercontent.com/Yo6T7-n47QeHjIi2wPaEdlCq6-X0Q8zRq_i8jD85h5pdtNdEkviB6riInTjxAn6lf0kkN5Tj26Hnqs_jl2wEx2Mf91Uis8uwAHDPIjDk=s1600" width="450px">
-
 
 ### Pantalla 4
 
@@ -42,9 +42,6 @@ Tener en cuenta que el API no permite más de 2 registros del mismo teléfono a 
 * Al hacer clic sobre el botón, debe enviar los datos al API y cuando regresa, debe pasar a la pantalla 5
 
 <img src="https://lh6.googleusercontent.com/OpCuvtL5S9D0YfM0wMMLfyBkT2qZ2D8N7ijH66s1-JPpUYRmQogTznu8pNsUHn-shzDRBJDpK6TLsiEcxLRsvW0GZLzsAjFouduEwkXx=s1600" width="350px">
-
-<img src="https://lh6.googleusercontent.com/OpCuvtL5S9D0YfM0wMMLfyBkT2qZ2D8N7ijH66s1-JPpUYRmQogTznu8pNsUHn-shzDRBJDpK6TLsiEcxLRsvW0GZLzsAjFouduEwkXx=s1600" width="350px">
-
 
 ### Pantalla 5
 
@@ -65,9 +62,12 @@ Tener en cuenta que el API no permite más de 2 registros del mismo teléfono a 
 
 * Una vez registrada la tarjeta se debe poder ingresar una contraseña de 4 números, esta no debe verse
 
+<div style="text-align: center">
 <img src="https://lh6.googleusercontent.com/xLnOtPDNwnwUbdLYXceHGd69CvvngL9GumtDRBpzDyYth9alRiwtsYNvYyOLPkpQixhRzj9g1yWGFsGtjFriQyaIc_N7sNW7betCvVa4=s1600" width="350px">
 
 <img src="https://lh3.googleusercontent.com/2u4wJyR4cPnzrHwQR0ITLTWn-TIiSFsCtnOcgaumL1JMPn_bK2MEEkjmCyEJ5KBvNjyTV5L6CZTuueE0e2MgS1FDF5M-rW70K3mavPMk=s1600" width="350px">
+
+</div>
 
 
 
@@ -78,7 +78,6 @@ Tener en cuenta que el API no permite más de 2 registros del mismo teléfono a 
 <img src="https://lh5.googleusercontent.com/ZyneKgvAOHCWO1SieGzv0C-V6l21nchlFF1zCQbLxGvGMC_UisyP3NCGjpW-GI4uvwsH2eLp8dsAzsWt4Jg-bCgH_WJ_R5htst-IAW8f=s1600" width="350px">
 
 ### Flujo
-
 ![Flujo App](./solucion-yape.gif)
 
 # Recursos
