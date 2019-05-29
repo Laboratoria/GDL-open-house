@@ -1,0 +1,26 @@
+[
+    {
+    "sede":"GDL002",
+    "name":"Ofelia Reyes",
+    "timezone":"America/Mexico_City",
+    "role":"instructor"
+ },
+ {
+    "sede":"GDL002",
+    "name":"Samantha Penilla",
+    "timezone":"America/Mexico_City",
+    "role":"instructor"
+ },
+ {
+    "sede":"GDL002",
+    "name":"Elizabeth portilla",
+    "timezone":"America/Mexico_City",
+    "role":"instructor"
+},
+{
+    "name":"Yesenia Sánchez Escárcega",
+    "sede":"GDL002",
+    "timezone":"America/Mexico_City",
+    "role":"instructor"
+}
+]
