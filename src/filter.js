@@ -1,14 +1,19 @@
-window.data = {
-// Filtrado
-// studentsFilter : (STUDENTS, name) => {
-//  const newArray= STUDENTS.filter(students => (students.name[0] == name || students.name[1] == name));
-//  newArray.forEach(element => console.log(newArray));
-//  showCard(newArray);
-//  return newArray;
-// },
 
-// Ordenar
 
-}
-console.log(STUDENTS)
+   const filterData = (STUDENTS) => {
 
+		let filteredData = STUDENTS.filter((element) => {
+            console.log(element.name)
+			for (let i = 0; i < element.name.length; i++) {
+				if (element.name[i] === "Ana Rocio Chavoya") {
+					return element;
+				}
+			}
+		});
+
+        return filteredData;
+    };
+    
+
+
+console.log(filterData(STUDENTS));
