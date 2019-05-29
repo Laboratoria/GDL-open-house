@@ -1,32 +1,138 @@
-<!DOCTYPE html>
-<html lang="es" dir="ltr">
-  <head>
+<!doctype html>
+<html lang="en">
+
+<head>
     <meta charset="utf-8">
-    <title>Organa</title>
-  </head>
-  <body>
-    <!-- The all migthy navbar section -->
-    <header>
-      <nav>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="ZXing for JS">
 
-      </nav>
-    </header>
-    <!-- Here goes the main screen with the camera -->
-    <section class="cameraScreen">
+    <title>ZXing TypeScript | Decoding from camera stream</title>
 
-    </section>
-    <!-- login section for the coaches -->
-    <section class="loginScreen">
+    <link rel="preload" as="style" onload="this.rel='stylesheet';this.onload=null" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="preload" as="style" onload="this.rel='stylesheet';this.onload=null" href="https://unpkg.com/normalize.css@8.0.0/normalize.css">
+    <link rel="preload" as="style" onload="this.rel='stylesheet';this.onload=null" href="https://unpkg.com/milligram@1.3.0/dist/milligram.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    </section>
-    <!-- the form section for new registers -->
-    <section class="newRegisterScreen">
+<body>
 
-    </section>
-    <!-- Here a coach can check the assistence -->
-    <section class="dataScreen">
+    <main class="wrapper" style="padding-top:2em">
 
-    </section>
+        <section class="container" id="demo-content">
+            <h1 class="title">Bienvenida Laboratorian</h1>
 
-  </body>
+            <p>
+                <a class="button-small button-outline" href="../../index.html">Refresacar</a>
+            </p>
+
+            <p>Ingresa una foto de tu qr</p>
+
+            <div>
+                <a class="button" id="startButton">Start</a>
+                <a class="button" id="resetButton">Reset</a>
+            </div>
+
+            <div id="video-container">
+                <video id="video" width="300" height="200" style="border: 1px solid gray"></video>
+            </div>
+
+            <div id="sourceSelectPanel" style="display:none">
+                <label for="sourceSelect">Change video source:</label>
+                <select id="sourceSelect" style="max-width:400px">
+                </select>
+            </div>
+
+            <label>Result:</label>
+            <blockquote>
+                <p id="result"></p>
+            </blockquote>
+
+            <p>See the <a href="https://github.com/zxing-js/library/tree/master/docs/examples/qr-camera/">source code</a> for this example.</p>
+        </section>
+
+        <footer class="footer">
+            <section class="container">
+                <p>ZXing TypeScript Demo. Licensed under the <a target="_blank" href="https://github.com/zxing-js/library#license" title="MIT">MIT</a>.</p>
+            </section>
+        </footer>
+
+    </main>
+    
+    <script type="text/javascript" src="https://unpkg.com/@zxing/library@latest"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.2/howler.min.js"></script>
+    <script type="text/javascript">
+        window.addEventListener('load', function() {
+            let selectedDeviceId;
+            const codeReader = new ZXing.BrowserQRCodeReader()
+            console.log('ZXing code reader initialized')
+            codeReader.getVideoInputDevices()
+                .then((videoInputDevices) => {
+                    let videoIndex = 0;
+
+
+
+                    if (videoInputDevices.length >= 1) {
+                        videoInputDevices.forEach((element) => {
+                            console.log(element);
+                        })
+                        const sourceSelect = document.getElementById('sourceSelect')
+
+                        // videoIndex = 1
+                        console.log(videoInputDevices.length);
+                        let length = videoInputDevices.length - 1;
+
+                        if (videoInputDevices[length].deviceId) {
+                            selectedDeviceId = videoInputDevices[length].deviceId;
+                            document.getElementById('startButton').addEventListener('click', () => {
+                                codeReader.decodeFromInputVideoDevice(selectedDeviceId, 'video').then((result) => {
+                                    console.log(result)
+                                    document.getElementById('result').textContent = result.text
+                             
+                                  var sound = new Howl({
+  src: ['https://d1490khl9dq1ow.cloudfront.net/sfx/mp3preview/jg-032316-sfx-elearning-correct-answer-sound-1.mp3']
+});
+
+sound.play();
+                                }).catch((err) => {
+                                    console.error(err)
+                                    document.getElementById('result').textContent = err
+                                })
+
+                                console.log(`Started continous decode from camera with id ${selectedDeviceId}`)
+                            })
+                        } else {
+                            document.getElementById('startButton').addEventListener('click', () => {
+                                codeReader.decodeFromInputVideoDevice(undefined, 'video').then((result) => {
+                                    console.log(result)
+                                    document.getElementById('result').textContent = result.text
+                                                                     var sound = new Howl({
+  src: ['https://d1490khl9dq1ow.cloudfront.net/sfx/mp3preview/jg-032316-sfx-elearning-correct-answer-sound-1.mp3']
+});
+
+sound.play();
+                                }).catch((err) => {
+                                    console.error(err)
+                                    document.getElementById('result').textContent = err
+                                })
+
+                                console.log(`Started continous decode from camera with id ${selectedDeviceId}`)
+                            })
+                        }
+                        console.log(length);
+                        console.log(selectedDeviceId);
+                    }
+
+                    document.getElementById('resetButton').addEventListener('click', () => {
+                        codeReader.reset()
+                        console.log('Reset.')
+                    })
+                })
+                .catch((err) => {
+                    console.error(err)
+                })
+        })
+    </script>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+
 </html>
