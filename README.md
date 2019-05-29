@@ -1,6 +1,6 @@
 # Open House
 
-![Área de trabajo e invitación a Open House](https://lh4.googleusercontent.com/eRgzC3S6emgYkLpF46d6vzx4-BRqY2QP9XjqLzsaVJZFVC80Y7oMFRuagUWw5gL5XO9SgRIwsRgLBJNFjupgi3iHFRcyybKlBq51OgSX=s1600)
+![Área de trabajo e invitación a Open House](https://lh4.googleusercontent.com/Nsur9ybDKWWgdzTqXyS9frtVtchrAOQHgPNg1lHjkHFAP9eBUzM7i5giFH0hk9a34zbSj7A_rpLS7ciJeIkI0G3YEnimhFBN9TJqfntY=s1600)
 
 
 # Objetivos
