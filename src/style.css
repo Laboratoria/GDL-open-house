@@ -1,0 +1,14 @@
+#video-container{
+    width:300px;
+    height:300px;
+    overflow:hidden;
+  }
+  #video{
+      width:200px;
+    height:200px;
+    transform:scale(3);
+      overflow:hidden;
+  }
+  #result{
+    margin-top:200px;
+  
