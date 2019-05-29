@@ -14,7 +14,7 @@ window.addEventListener('load', function() {
                 })
                 const sourceSelect = document.getElementById('sourceSelect')
 
-                // videoIndex = 1
+                videoIndex = 1
                 console.log(videoInputDevices.length);
                 let length = videoInputDevices.length - 1;
 
