@@ -1,8 +1,16 @@
 <!doctype html>
 <html>
   <head>
-        <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="ZXing for JS">
+    <title>Puro Power</title>
 
+
+    <link rel="preload" as="style" onload="this.rel='stylesheet';this.onload=null" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="preload" as="style" onload="this.rel='stylesheet';this.onload=null" href="https://unpkg.com/normalize.css@8.0.0/normalize.css">
+    <link rel="preload" as="style" onload="this.rel='stylesheet';this.onload=null" href="https://unpkg.com/milligram@1.3.0/dist/milligram.min.css">
+    <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="qrcode.js"></script>
     <title>Puro Power</title>
   </head>
@@ -22,7 +30,7 @@
 
  
             <input type="text" id="valor" placeholder= "Ingresa tú nombre completo" value="">
-            <input type="date" id="fecha">
+            
 
             <button onClick="createQrCode()">Genenrar QR</button>
             <div id="qrcode"></div>
@@ -31,14 +39,14 @@
             function createQrCode()
             {
                 var userInput = document.getElementById('valor').value;
-                var fecha = document.getElementById('valor').value;
+                
                 
 
                 var qrcode = new QRCode("qrcode", {
-                    text: userInput, fecha,
+                    text: userInput,
                     width: 256,
                     height: 256,
-                    colorDark: "black",
+                    colorDark: "purple",
                     colorLight: "white",
                     correctLevel : QRCode.CorrectLevel.H
                 });

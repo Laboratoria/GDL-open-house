@@ -35,7 +35,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: rgb(47, 70, 90);
+    background-color: rgb(148, 170, 20);
     position: -webkit-sticky;
     /* Safari */
     position: sticky;
@@ -55,7 +55,7 @@ li a {
 }
 
 li a:hover {
-    background-color: rgba(121, 139, 156, 0.699);
+    background-color: rgba(189, 186, 21, 0.699);
 }
 
 .active {
@@ -79,7 +79,7 @@ li a:hover {
 }
 
 .topnav a:hover {
-  background-color: rgb(196, 189, 189);
+  background-color: rgb(170, 182, 11);
   color: black;
 }
 
@@ -136,7 +136,7 @@ li a:hover {
 
 #qrcode{
   position: relative;
-  margin-left: 10%;
+  margin-left: 5%;
   margin-top: 5%;
 
 }
