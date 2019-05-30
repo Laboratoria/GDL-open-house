@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="ZXing for JS">
+    <title> < Organa > </title>
+
+
+    <link rel="preload" as="style" onload="this.rel='stylesheet';this.onload=null" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="preload" as="style" onload="this.rel='stylesheet';this.onload=null" href="https://unpkg.com/normalize.css@8.0.0/normalize.css">
+    <link rel="preload" as="style" onload="this.rel='stylesheet';this.onload=null" href="https://unpkg.com/milligram@1.3.0/dist/milligram.min.css">
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+  <body>
+        <header id="header">
+                <nav>
+                    <ul class="topnav" id="myTopnav">
+
+                            <li><a class="active" href="index.html"> 🏠 </a></li>
+                            <li><a href="creador.html">Registro</a></li>
+                            <li><a href="coaches.html">Instructores</a></li>
+                            <li><a href="javascript:void(0);" class="icon" onclick="mymenu()"></a></li>
+
+                    </ul>
+                </nav>
+            </header>
+
+
+
+            <input type="text" id="valor" placeholder= "Ingresa tú nombre completo" value="">
+
+
+            <button onClick="createQrCode()">Generar QR</button>
+            <div id="qrcode"></div>
+         </body>
+  <script>
+            function createQrCode()
+            {
+                var userInput = document.getElementById('valor').value;
+
+
+
+                var qrcode = new QRCode("qrcode", {
+                    text: userInput,
+                    width: 256,
+                    height: 256,
+                    colorDark: "purple",
+                    colorLight: "white",
+                    correctLevel : QRCode.CorrectLevel.H
+                });
+
+
+            }
+
+          </script>
+                        <script type="text/javascript" src="https://unpkg.com/@zxing/library@latest"></script>
+                        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.2/howler.min.js"></script>
+                        <script type="text/javascript" src="creador.js"></script>
+                        <script type="text/javascript" src="qrcode.js"></script>
+
+
+</html>
