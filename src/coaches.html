@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="ZXing for JS">
+    <title> < Organa > </title>
+
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="preload" as="style" onload="this.rel='stylesheet';this.onload=null" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="preload" as="style" onload="this.rel='stylesheet';this.onload=null" href="https://unpkg.com/normalize.css@8.0.0/normalize.css">
+    <link rel="preload" as="style" onload="this.rel='stylesheet';this.onload=null" href="https://unpkg.com/milligram@1.3.0/dist/milligram.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+        <header id="header">
+                <nav>
+                    <ul class="topnav" id="myTopnav">
+
+                            <li><a class="active" href="index.html"> 🏠 </a></li>
+                            <li><a href="creador.html">Registro</a></li>
+                            <li><a href="instructores.html">Instructores</a></li>
+                            <li><a href="javascript:void(0);" class="icon" onclick="mymenu()"></a></li>
+
+                    </ul>
+                </nav>
+            </header>
+
+
+
+    <!-- Required meta tags -->
+
+
+    <!-- Comienza programa -->
+    <title>Agrega a una Laboratorian</title>
+    <p id="dia"></p>
+    <p id="diaSemana"></p>
+    <p id="year"></p>
+    <p id="mes"></p>
+    <p id="horas"></p>
+    <p id="minutos"></p>
+    <p id="ampm"></p>
+<button class="btn btn-info" id="botonAsistencia" onclick="tomarHora()">TomarHora</button>
+  </head>
+  <body>
+      <section class="container">
+    <h1>Agrega a una Laboratorian</h1>
+    <input type="text" id="name" placeholder="name" class="form-control my-3">
+    <input type="text" id="sede" placeholder="sede" class="form-control my-3">
+    <input type="text" id="timezone" placeholder="timezone" class="form-control my-3">
+    <input type="text" id="role" placeholder="role" class="form-control">
+    <button class="btn btn-info" id="boton" onclick="guardar()">Guardar</button>
+    <!-- Tabla de todas las estudiantes -->
+    <table class="table table-dark">
+            <thead>
+              <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Fecha/Hora</th>
+                <th scope="col"><i class="fas fa-star"></i></th>
+                <th scope="col"><i class="fas fa-ghost"></i></th>
+                <th scope="col"><i class="fas fa-clock"></i></th>
+                <th scope="col"><i class="fas fa-sad-tear"></i></th>
+              </tr>
+            </thead>
+            <tbody id="tablaAsistencia">
+
+            </tbody>
+          </table>
+
+    <!-- Tabla de retardos-->
+    <!-- <table class="table table-dark">
+            <thead>
+              <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Fecha/Hora</th>
+                <th scope="col">Sede</th>
+                <th scope="col">Timezones</th>
+                <th scope="col">role</th>
+              </tr>
+            </thead>
+            <tbody id="tabla">
+            </tbody>
+          </table>-->
+</section>
+<input type="date" id="fecha">
+<!--firestore-->
+<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="firestore.js"></script>
+  <script src="table.js"></script>
+    <script src="app.js"></script>
+
+    <script type="text/javascript" src="https://unpkg.com/@zxing/library@latest"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.2/howler.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+
+</body>
+</html>
