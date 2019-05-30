@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="utf-8">
@@ -16,12 +16,30 @@
 
 <body>
 
+
+        <header id="header">
+                <nav>
+                    <ul class="topnav" id="myTopnav">
+
+                            <li><a class="active" href="index.html"> 🏠 </a></li>
+                            <li><a href="creador.html">Registro</a></li>
+                            <li><a href="coaches.html">Instructores</a></li>
+                            <li><a href="javascript:void(0);" class="icon" onclick="mymenu()"></a></li>
+
+                    </ul>
+                </nav>
+            </header>
+
     <main class="wrapper" style="padding-top:2em">
 
         <section class="container" id="demo-content">
-            <h1 class="title">Bienvenida Laboratorian</h1>
+            <h1 class="title">Buen día, Laboratorian</h1>
 
-            <p>Coloca tu credencial frente a la camara</p>
+            <p>
+                <a class="button-small button-outline" href="index.html">Refresacar</a>
+            </p>
+
+            <p>Escanea tu QR</p>
 
             <div>
                 <a class="button" id="startButton">Start</a>
@@ -47,9 +65,6 @@
 
         <footer class="footer">
             <section class="container">
-              
-                <a class="button-small button-outline" href="file:///C:/Users/Laboratoria/Desktop/GDL-open-house/src/index.html">Inicio</a>
-
             </section>
         </footer>
 
@@ -60,6 +75,7 @@
     <script src="data.js"></script>
     <script type="text/javascript" src="filter.js"></script>
     <script type="text/javascript" src="index.js"></script>
+
 </body>
 
 </html>
