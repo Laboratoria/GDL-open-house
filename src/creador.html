@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+        <link rel="stylesheet" href="style.css">
+
+    <script type="text/javascript" src="qrcode.js"></script>
+    <title>Puro Power</title>
+  </head>
+  <body>
+        <header id="header">
+                <nav>
+                    <ul class="topnav" id="myTopnav">
+                       
+                            <li><a class="active" href="index.html"> 🏠 </a></li>
+                            <li><a href="creador.html">Registro</a></li>
+                            <li><a href="instructores.html">Instructores</a></li>
+                            <li><a href="javascript:void(0);" class="icon" onclick="mymenu()"></a></li>
+                            
+                    </ul>
+                </nav>
+            </header>   
+
+ 
+            <input type="text" id="valor" placeholder= "Ingresa tú nombre completo" value="">
+            <input type="date" id="fecha">
+
+            <button onClick="createQrCode()">Genenrar QR</button>
+            <div id="qrcode"></div>
+         </body>
+  <script>    
+            function createQrCode()
+            {
+                var userInput = document.getElementById('valor').value;
+                var fecha = document.getElementById('valor').value;
+                
+
+                var qrcode = new QRCode("qrcode", {
+                    text: userInput, fecha,
+                    width: 256,
+                    height: 256,
+                    colorDark: "black",
+                    colorLight: "white",
+                    correctLevel : QRCode.CorrectLevel.H
+                });
+
+
+            }
+          
+          </script>    
+                        <script type="text/javascript" src="https://unpkg.com/@zxing/library@latest"></script>
+                        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.2/howler.min.js"></script>
+                        <script type="text/javascript" src="creador.js"></script>      
+
+ 
+</html>

@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="ZXing for JS">
+    <title>Puro Power</title>
 
-    <title>ZXing TypeScript | Decoding from camera stream</title>
 
     <link rel="preload" as="style" onload="this.rel='stylesheet';this.onload=null" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
     <link rel="preload" as="style" onload="this.rel='stylesheet';this.onload=null" href="https://unpkg.com/normalize.css@8.0.0/normalize.css">
@@ -15,6 +15,20 @@
 </head>
 
 <body>
+
+
+        <header id="header">
+                <nav>
+                    <ul class="topnav" id="myTopnav">
+                       
+                            <li><a class="active" href="index.html"> 🏠 </a></li>
+                            <li><a href="creador.html">Registro</a></li>
+                            <li><a href="instructores.html">Instructores</a></li>
+                            <li><a href="javascript:void(0);" class="icon" onclick="mymenu()"></a></li>
+                            
+                    </ul>
+                </nav>
+            </header>
 
     <main class="wrapper" style="padding-top:2em">
 
@@ -47,12 +61,10 @@
                 <p id="result"></p>
             </blockquote>
 
-            <p>See the <a href="https://github.com/zxing-js/library/tree/master/docs/examples/qr-camera/">source code</a> for this example.</p>
         </section>
 
         <footer class="footer">
             <section class="container">
-                <p>ZXing TypeScript Demo. Licensed under the <a target="_blank" href="https://github.com/zxing-js/library#license" title="MIT">MIT</a>.</p>
             </section>
         </footer>
 
@@ -61,6 +73,7 @@
     <script type="text/javascript" src="https://unpkg.com/@zxing/library@latest"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.2/howler.min.js"></script>
     <script type="text/javascript" src="index.js"></script>
+    
 </body>
 
 </html>
