@@ -1,24 +1,24 @@
 //Agregar elementos a la coleccion
-function guardar (){
+//function guardar (){
    
-    db.collection("estudiantes").add({
-        name:document.getElementById('name').value,
-        sede:document.getElementById('sede').value,
-        timezone:document.getElementById('timezone').value,
-        role:document.getElementById('role').value
-    })
-    .then(function(docRef) {
-        console.log("Document written with ID: ", docRef.id);
-        document.getElementById('name').value='';
-        document.getElementById('sede').value='';
-        document.getElementById('timezone').value='';
-        document.getElementById('role').value='';
+    //db.collection("asistencia").add({
+      //  name:document.getElementById(result).value,
+        //sede:document.getElementById(new Date).value,
+       // timezone:document.getElementById('timezone').value,
+       // role:document.getElementById('role').value
+  //  })
+   // .then(function(docRef) {
+    //    console.log("Document written with ID: ", docRef.id);
+     //   document.getElementById('name').value='';
+      //  document.getElementById('sede').value='';
+     //   document.getElementById('timezone').value='';
+     //   document.getElementById('role').value='';
         
-    })
-    .catch(function(error) {
-        console.error("Error adding document: ", error);
-    });
-    }
+  //  })
+   // .catch(function(error) {
+   //     console.error("Error adding document: ", error);
+   // });
+  //  }
     
     //.....Lee elementos de coleccion estudiantes.....
     //let tabla=document.getElementById('tabla');
@@ -45,6 +45,7 @@ function guardar (){
     //.....Lee Asistencia de coleccion estudiantes.....
     
     let tabla=document.getElementById('tablaAsistencia');
+    console.log("db", db);
     db.collection("estudiantes").get().then((querySnapshot)=>{
       tabla.innerHTML='';
         querySnapshot.forEach((doc)=>{
@@ -52,7 +53,7 @@ function guardar (){
             tabla.innerHTML+=`<tr>
            <th scope="row">${doc.data().name}</th>
             <td>${doc.data().fecha}</td>
-            <td>@mdo</td>
+            <td>${doc.data().hora}</td>
             <td>@mdo</td>
             <td>@mdo</td>
             <td><button class="btn btn-info" onclick="editar('${doc.data().fecha}')">Editar</button></td>
