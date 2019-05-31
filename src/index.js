@@ -1,6 +1,25 @@
+
+    
+
+
+
 window.addEventListener('load', function() {
     let selectedDeviceId;
     const codeReader = new ZXing.BrowserQRCodeReader()
+
+    function subirAFirebase (nombre){
+        db.collection("estudiantes").add({
+             name:nombre,
+              fecha: new Date(),
+            
+          })
+          .then(function(docRef) {
+            console.log("Document written with ID: ", docRef.id);
+          })
+         .catch(function(error) {
+            console.error("Error adding document: ", error);
+         });
+         }
     console.log('ZXing code reader initialized')
     codeReader.getVideoInputDevices()
         .then((videoInputDevices) => {
@@ -23,8 +42,8 @@ window.addEventListener('load', function() {
                     document.getElementById('startButton').addEventListener('click', () => {
                         codeReader.decodeFromInputVideoDevice(selectedDeviceId, 'video').then((result) => {
                             console.log(result)
-                            document.getElementById('result').textContent = result.text
-                     
+                            document.getElementById('result').textContent = result.text;
+                            subirAFirebase(result.text);
                           var sound = new Howl({
 src: ['https://d1490khl9dq1ow.cloudfront.net/sfx/mp3preview/jg-032316-sfx-elearning-correct-answer-sound-1.mp3']
 });
@@ -67,4 +86,10 @@ sound.play();
         .catch((err) => {
             console.error(err)
         })
-})
+
+       
+        
+});
+
+
+
