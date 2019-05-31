@@ -48,14 +48,14 @@
                     </ul>
                 </nav>
             </header>
+            <div class="container">
+              <input type="text" id="valor" placeholder= "Ingresa tú nombre completo" value="">
 
 
+              <button class="pinkBtn button text" onClick="createQrCode()">Generar QR</button>
+              <div id="qrcode"></div>
 
-            <input type="text" id="valor" placeholder= "Ingresa tú nombre completo" value="">
-
-
-            <button onClick="createQrCode()">Generar QR</button>
-            <div id="qrcode"></div>
+            </div>
          </body>
   <script>
             function createQrCode()
