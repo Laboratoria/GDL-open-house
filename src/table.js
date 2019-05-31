@@ -1,45 +1,3 @@
-//Agregar elementos a la coleccion
-//function guardar (){
-   
-    //db.collection("asistencia").add({
-      //  name:document.getElementById(result).value,
-        //sede:document.getElementById(new Date).value,
-       // timezone:document.getElementById('timezone').value,
-       // role:document.getElementById('role').value
-  //  })
-   // .then(function(docRef) {
-    //    console.log("Document written with ID: ", docRef.id);
-     //   document.getElementById('name').value='';
-      //  document.getElementById('sede').value='';
-     //   document.getElementById('timezone').value='';
-     //   document.getElementById('role').value='';
-        
-  //  })
-   // .catch(function(error) {
-   //     console.error("Error adding document: ", error);
-   // });
-  //  }
-    
-    //.....Lee elementos de coleccion estudiantes.....
-    //let tabla=document.getElementById('tabla');
-    //db.collection("estudiantes").get().then((querySnapshot)=>{
-       // tabla.innerHTML='';
-        //querySnapshot.forEach((doc)=>{
-          //  console.log(`${doc.id}=>${doc.data().name}`);
-            //tabla.innerHTML+=`<tr>
-            //<td>${doc.data().name}</td>
-            //<td>18515</td>
-            //<td>${doc.data().sede}</td>
-            //<td>${doc.data().timezone}</td>
-            //<td>${doc.data().role}</td>
-            //<td><button onClick="editar ('${doc.id}','${doc.data().date')"></button></td>
-            //</tr>`
-      //  });
-    //});
-      
-    
-    
-    
     
     
     //.....Lee Asistencia de coleccion estudiantes.....
@@ -54,9 +12,10 @@
            <th scope="row">${doc.data().name}</th>
             <td>${doc.data().fecha}</td>
             <td>${doc.data().hora}</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
-            <td><button class="btn btn-info" onclick="editar('${doc.data().fecha}')">Editar</button></td>
+            <td>${doc.data().asistencia}</td>
+            <td>${doc.data().falta}</td>
+            <td>${doc.data().retardo}</td>
+            <td>${doc.data().dropOut}</td>
           </tr>`
         });
     });

@@ -1,16 +1,17 @@
-
-    
-
-
-
 window.addEventListener('load', function() {
+     let today= new Date();
+
+       let date = today.getDate() + '-'+ (today.getMonth()+1)+'-' + today.getFullYear();
+
+        let hour = today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
     let selectedDeviceId;
     const codeReader = new ZXing.BrowserQRCodeReader()
 
     function subirAFirebase (nombre){
         db.collection("estudiantes").add({
              name:nombre,
-              fecha: new Date(),
+             fecha: date,
+              hora: hour,
             
           })
           .then(function(docRef) {
